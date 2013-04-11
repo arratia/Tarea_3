@@ -24,21 +24,22 @@ int main(int argc, char** argv)
 
     if (PQstatus(cnn) != CONNECTION_BAD) {
         cout << "Estamos conectados a PostgreSQL!" << endl;
-        result = PQexec(cnn, "SELECT * FROM cursos");
-
+        result = PQexec(cnn, "SELECT docente_id as \"cod docente\", AVG(nota) as \"promedio de notas\", STDDEV(nota) as \"desviacion estandar de notas\"  FROM cursos AS c, asignaturas_cursadas AS a WHERE c.curso_id = a.curso_id GROUP BY docente_id");
+);
         if (result != NULL) {
             int tuplas = PQntuples(result);
             int campos = PQnfields(result);
             cout << "No. Filas:" << tuplas << endl;
-            cout << "No. Campos:" << campos << endl;
+            cout << "No. Columnas:" << campos << endl;
 
-            cout << "Los nombres de los campos son:" << endl;
+            cout << "NOMBRES DE LAS COLUMNAS:" << endl;
+ 	    cout << "***************************************" << endl;
 
             for (i=0; i<campos; i++) {
                 cout << PQfname(result,i) << " | ";
             }
 
-            cout << endl << "Contenido de la tabla" << endl;
+            cout << endl << "*******************************" << endl;
 
             for (i=0; i<tuplas; i++) {
                 for (int j=0; j<campos; j++) {
