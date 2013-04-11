@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <libpq-fe.h>
+#include <libpq-fe.h> //libreria para realizar conexion con la base de datos postgresql
 
 
 using namespace std;
@@ -15,7 +15,8 @@ using namespace std;
 PGconn *cnn = NULL;
 PGresult *result = NULL;
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) 
+{
 
     int i;
 
@@ -47,8 +48,8 @@ int main(int argc, char** argv) {
             }
         }
 
-       // Ahora nos toca liberar la memoria
-        PQclear(result);
+       
+        PQclear(result); // Ahora nos toca liberar la memoria
 
     } else {
         cout << "Error de conexion" << endl;
