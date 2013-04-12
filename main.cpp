@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
- * Author: Cristobal
- *         Nicolas
- *         josimar
+ * Author: Cristobal Perez
+ *         Nicolas Arratia
+ *         Josimar Gonzalez
  * Created on 11 de abril de 2013, 3:14
  */
 
