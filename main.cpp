@@ -1,8 +1,7 @@
 ﻿/* 
- * File:   main.cpp
- * Author: Cristobal
- *
- * Created on 11 de abril de 2013, 3:14
+ * AutorES: Cristobal Perez
++ *         Nicolas Arratia
++ *         Josimar Gonzalez
  */
 
 #include <cstdlib>
