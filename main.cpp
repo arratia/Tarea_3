@@ -1,13 +1,14 @@
 /* 
  * File:   main.cpp
  * Author: Cristobal
- *
+ *         Nicolas
+ *         josimar
  * Created on 11 de abril de 2013, 3:14
  */
 
 #include <cstdlib>
 #include <iostream>
-#include <libpq-fe.h> //libreria para realizar conexion con la base de datos postgresql
+#include <libpq-fe.h> //libreria para realizar conexion con la base de datos
 
 
 using namespace std;
